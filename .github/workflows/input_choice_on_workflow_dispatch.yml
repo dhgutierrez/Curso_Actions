@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: Comentário
         run: |
-          echo "Comentário PUSH WORKFLOW - branch"
+          echo "Comentário Workflow dispatch - ${{inputs.tags}}"
