@@ -1,0 +1,21 @@
+name: GitHub Actions - Input Choice Workflow Dispatch - Branch Template
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: Selecione a tag
+        type: choice
+        options:
+          - tag_1
+          - tag_2
+          - tag_3
+        default: 'tag_1'
+        required: true
+jobs:
+  on-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Comentário
+        run: |
+          echo "Comentário PUSH WORKFLOW - branch"
