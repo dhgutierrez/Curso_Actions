@@ -1,0 +1,15 @@
+name: GitHub Actions - Bool String Workflow Dispatch - Branch Template
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      severidade:
+        description: Funcionalidade critica?
+        type: boolean
+jobs:
+  on-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Comentário
+        run: |
+          echo "Comentário Workflow dispatch - Boolean: ${{inputs.severidade}}"
