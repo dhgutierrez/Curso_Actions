@@ -1,9 +1,6 @@
-name: GitHub Actions - Branch Pull Request - Branch Template
+name: GitHub Actions - Basic Workflow Dispatch - Branch Template
 run-name: Running - ${{ github.event_name }}
-on:
-  pull_request:
-    branches:
-      - main
+on: [workflow_dispatch]
 jobs:
   on-push:
     runs-on: ubuntu-20.04
